@@ -1,4 +1,4 @@
-from quart import Quart
+from quart import Quart, redirect
 import os
 
 # ---------------
@@ -29,8 +29,8 @@ app.register_blueprint(ubBlueprint,url_prefix='/bravery')
 
 # Default route
 @app.route("/")
-def hello():
-    return "Hello World!"
+def default():
+    return redirect("/bravery")
 
 # ---------------
 

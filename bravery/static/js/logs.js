@@ -13,14 +13,36 @@ $(function(){
             type: "POST",
             dataType: "json",
             success: function(data){
-                // chope la div avec log_container comme id 
-                log_container.innerHTML = data;
+
+                // On conserve le scroll pour être au même endroit quand la page va reload 
+                var oldscroll = document.getElementById('logs').scrollTop;
+
                 // ici data est le contenu de logs_model modifié
+                log_container.innerHTML = data;
+                filterLogs();
+                document.getElementById('logs').scrollTop = oldscroll;
             }
         });
     }
 
 });
+
+// Filtre champions
+function filterLogs() {
+	var input = document.getElementById('logFilter');
+	var filter = input.value.toLowerCase();
+
+	var logs = document.getElementsByClassName("log_container");
+	for (var log of logs) {
+		logIp = log.children[1].innerText ;
+		if (logIp.includes(filter) || filter == ""){
+			log.style.display = "block";
+		}
+		else{
+			log.style.display = "none";
+		}
+	}
+}
 
 function resetLogs(){
 	$.post('/bravery/reset_log');

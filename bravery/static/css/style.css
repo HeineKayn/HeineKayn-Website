@@ -123,13 +123,15 @@ body{
 
 /* LOGS */
 
-#logs{
+#log_container{
 	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-	overflow: scroll;
-	height: 900px;
+}
+
+#logs{
+    overflow: scroll;
+    height: 900px;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .log_ip{
