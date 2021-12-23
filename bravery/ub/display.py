@@ -26,9 +26,9 @@ def AddBord(img,x,y):
 
 def AddImg(url,x,y,bord=False,size=None,alpha=False):
 
-	out = path = "./ressources/tempImage.png"
+	out = path = "./bravery/ressources/tempImage.png"
 	if ".svg" in url :
-		out = "./ressources/tempImage.svg"
+		out = "./bravery/ressources/tempImage.svg"
 
 	response = requests.get(url,stream=True, headers={'User-agent': 'Mozilla/5.0'})
 	if response.status_code == 200:

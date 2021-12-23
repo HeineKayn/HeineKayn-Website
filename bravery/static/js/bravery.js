@@ -103,7 +103,7 @@ function getChampions() {
 // Start Bravery
 function startBravery(){
 	var champions = getChampions();
-	$.post('/start_bravery', {"champions" : champions, "map" : map, "difficulte" : difficulte, "ip" : ip}).done(function(response) {
+	$.post('/bravery/start_bravery', {"champions" : champions, "map" : map, "difficulte" : difficulte, "ip" : ip}).done(function(response) {
 		document.getElementById("ub_result_container").innerHTML = "<img src=\"" + response + "\">";
 		document.cookie = response;
 	});

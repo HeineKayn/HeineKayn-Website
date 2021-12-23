@@ -9,7 +9,7 @@ $(function(){
     function loadNewLogs(){
         var log_container = document.getElementById("log_container");
         $.ajax({
-            url: "/update_logs",
+            url: "/bravery/update_logs",
             type: "POST",
             dataType: "json",
             success: function(data){
@@ -23,5 +23,5 @@ $(function(){
 });
 
 function resetLogs(){
-	$.post('/reset_log'); // , ""
+	$.post('/bravery/reset_log');
 }
