@@ -6,12 +6,13 @@ import requests
 from PIL import Image,ImageFont,ImageDraw
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPM
-import numpy as np
+
+import os
 
 color = (170,170,170)
 
 def AddText(text,size,x,y):
-	font = ImageFont.truetype("arial.ttf",size)
+	font = ImageFont.truetype("./bravery/static/fonts/Beaufort.ttf",size)
 	draw = ImageDraw.Draw(bg)
 	draw.text((x,y),text,font=font,fill=color)
 
@@ -64,7 +65,7 @@ def AddImg(url,x,y,bord=False,size=None,alpha=False):
 	bg.paste(img,(x,y))
 
 def MiseFormeTexte(texte,x,y,w=9999,sfont = 35): # sfont ( taille de base ) = 35
-	font = ImageFont.truetype("arial.ttf",sfont)
+	font = ImageFont.truetype("./bravery/static/fonts/Beaufort.ttf",sfont)
 	if font.getsize(texte)[0] > w :
 		sfont -= 1
 		MiseFormeTexte(texte,w,x,y,sfont)
