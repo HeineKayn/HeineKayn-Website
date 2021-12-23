@@ -3,3 +3,5 @@ data/.env
 test
 *.png
 *.svg
+static/txt/logs.txt
+*.pyc
