@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	var difficulte_slider = document.getElementById("difficulte_slider");
-	difficulte_slider.addEventListener("click", sliderDifficulte);
+	difficulte_slider.addEventListener("input", sliderDifficulte);
 
 	document.getElementById("allButton").addEventListener("click", allChampions);
 	document.getElementById("noneButton").addEventListener("click", noneChampions);
