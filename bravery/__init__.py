@@ -1,20 +1,18 @@
 from quart import Blueprint, request, render_template, jsonify
 
 import os
-from datetime import datetime,timedelta,date
+from datetime import datetime,timedelta
 import json
 
-from .ub import *
+
+from bravery.ub.bdd import BDD
+from bravery.ub.display import Displayer
 
 # ---------------
 
 ubBlueprint = Blueprint('webBravery', __name__, template_folder='templates', static_folder='static', url_prefix='/bravery')
 
 # ---------------
-
-bdd  = bdd.BDD()
-display = display.Displayer(bdd)
-pick = pick.Picker(bdd)
 
 logPath = "./bravery/static/txt/logs.txt"
 ubImgPath = "./bravery/static/image/ubResult"
@@ -41,6 +39,7 @@ def clearOldBravery():
 
 @ubBlueprint.route("/")
 async def ultimateBravery():
+    bdd  = BDD()
     champions = bdd.get.championsFull()
     clearOldBravery()
     return await render_template('ultimateBravery.html', champions=champions)
@@ -51,6 +50,11 @@ async def startBravery():
     champions  = dic.getlist("champions[]")
     map        = dic["map"]
     difficulte = int(dic["difficulte"])
+
+    # Objets pour bravery
+    bdd  = BDD()
+    display = Displayer(bdd)
+    # pick = pick.Picker(bdd)
 
     # On fait l'image et on l'enregistre avec un tag unique
     dateNow    = datetime.now()
