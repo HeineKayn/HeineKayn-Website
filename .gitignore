@@ -5,3 +5,5 @@ test
 *.svg
 static/txt/logs.txt
 *.pyc
+.env
+*.txt
