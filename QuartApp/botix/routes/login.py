@@ -5,7 +5,7 @@ import json
 
 loginBP = Blueprint('login', __name__)
 
-passwordPath = './QuartApp/botix/static/password.txt'
+passwordPath = './botix/static/password.txt'
 
 @loginBP.route("/")
 async def login(password=""):

@@ -6,7 +6,7 @@ import random
 
 configBP = Blueprint('config', __name__)
 
-keyPath = './QuartApp/botix/static/keys.txt'
+keyPath = './botix/static/keys.txt'
 
 @configBP.route("/")
 @login_required

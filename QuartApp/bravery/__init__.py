@@ -99,4 +99,4 @@ async def resetLogs():
 async def logs():
     with open(logPath, "r") as f:
         logs = json.load(f)
-    return await render_template('logs.html',logs=logs)
+    return await render_template('ublogs.html',logs=logs)

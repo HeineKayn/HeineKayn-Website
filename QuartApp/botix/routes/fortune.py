@@ -6,8 +6,8 @@ import random
 
 fortuneBP = Blueprint('fortune', __name__)
 
-coffrePath = './QuartApp/botix/static/coffres.txt'
-keyPath    = './QuartApp/botix/static/keys.txt'
+coffrePath = './botix/static/coffres.txt'
+keyPath    = './botix/static/keys.txt'
 
 @fortuneBP.route("/")
 @login_required

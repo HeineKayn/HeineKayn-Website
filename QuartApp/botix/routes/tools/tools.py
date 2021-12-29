@@ -2,7 +2,7 @@ from datetime import datetime
 import json
 
 def Need_update(file,delay=1):
-	path = "./web_data/{}".format(file)
+	path = "../web_data/{}".format(file)
 	date_format = "%Y/%m/%d %H:%M:%S" 
 	now = datetime.now()
 
@@ -17,7 +17,7 @@ def Need_update(file,delay=1):
 	return not old_date or (now - old_date).total_seconds() > delay
 
 def Get_json(file):
-	path = "./web_data/{}".format(file)
+	path = "../web_data/{}".format(file)
 
 	with open(path) as json_file:
 		data = json.load(json_file)["content"]
