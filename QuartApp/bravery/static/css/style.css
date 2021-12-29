@@ -61,7 +61,7 @@ body{
 
 #champion_selector{
 	overflow: scroll;
-  	height: 200px;
+  	height: 280px;
 	width: 100%;
   	overflow-x: hidden;
 	margin: 0px 0px 25px;

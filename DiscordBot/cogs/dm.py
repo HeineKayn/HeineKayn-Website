@@ -12,9 +12,10 @@ class DM_Response(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self,message):
 
+        botid = str(self.bot.user.id)
         try : 
             with open("../web_data/config.txt") as json_file:
-                reponse = json.load(json_file)["reponse"]
+                reponse = json.load(json_file)[botid]["reponse"]
                 reponse = reponse.split("\n")
         except :
             reponse = ""

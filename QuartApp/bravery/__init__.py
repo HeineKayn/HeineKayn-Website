@@ -30,7 +30,10 @@ def clearOldBravery():
             if dateNow > dateThen :
                 logs.pop(index) # On enlève de log.txt
                 path = "./bravery" + log["path"][1:]
-                os.remove(path)
+                try :
+                    os.remove(path)
+                except :
+                    pass
 
     with open(logPath, 'w') as f:
         json.dump(logs, f, indent=4)

@@ -1,5 +1,7 @@
 {
-    "avatar": "https://cdn.discordapp.com/attachments/785215626687414283/925485140677914664/220.png",
-    "pseudo": "Botux",
-    "reponse": "Merci mais je m'en bats les couilles\nC'est entendu\nD'accord mek\nL\u00e2che moi la grappe ok?? "
+    "679807004424142891": {
+        "reponse": "Qu'est ce que tu me veux :robot:\nVa voir ailleurs si j'y suis (\u256f\u00b0\u25a1\u00b0\uff09\u256f\ufe35 \u253b\u2501\u253b \nJe suis d'accord, fuck Luxanna \nNon \nD'accord\nJe ne savais pas que les humains \u00e9taient si stupides\nCe message sera la raison pour laquelle j'aurais extermin\u00e9 la race humaine\nTu t'amuses \u00e0 parler \u00e0 un robot qui n'a ni sentiment ni estime envers toi (comme la plus part des autres humains d'ailleurs)\nBotix.\nBip Boup ",
+        "avatar": "https://cdn.discordapp.com/attachments/785215626687414283/925810360190115960/botix.png",
+        "pseudo": "BOTIX"
+    }
 }

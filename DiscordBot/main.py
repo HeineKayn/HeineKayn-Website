@@ -10,7 +10,7 @@ load_dotenv()
 
 IPC_Pass = os.getenv('IPC_Pass')
 Token = os.getenv('Test_Token')
-# Token = os.getenv('Botix_Token')
+Token = os.getenv('Botix_Token')
 
 initial_extentions = [
     "cogs.context",
