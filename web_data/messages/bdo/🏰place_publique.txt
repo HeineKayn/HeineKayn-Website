@@ -1,5 +1,5 @@
 {
-    "time": "2021/12/29 02:15:03",
+    "time": "2021/12/29 02:34:49",
     "content": [
         {
             "avatar": "https://cdn.discordapp.com/avatars/174112128548995072/17de30c0624ffb20f542e229ca9b8d12.webp?size=1024",
@@ -33,7 +33,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ptdr ok"
             ],
@@ -43,7 +43,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "hmmmmmmmmmm d'accoord"
             ],
@@ -53,7 +53,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "chelou"
             ],
@@ -63,7 +63,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "fiou"
             ],
@@ -73,7 +73,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ahhhh wtf"
             ],
@@ -83,7 +83,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "je crois bien"
             ],
@@ -93,7 +93,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "y'a un soucis non"
             ],
@@ -103,7 +103,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "soucis l\u00e0 non"
             ],
@@ -113,7 +113,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "euhh ok"
             ],
@@ -123,7 +123,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "owo"
             ],
@@ -133,7 +133,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "coyote"
             ],
@@ -143,7 +143,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "dindoneau"
             ],
@@ -153,7 +153,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ono"
             ],
@@ -163,7 +163,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "saperli"
             ],
@@ -173,7 +173,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "llllll"
             ],
@@ -183,7 +183,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "blaireau"
             ],
@@ -193,7 +193,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ay"
             ],
@@ -203,7 +203,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ayaya"
             ],
@@ -213,7 +213,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "oui"
             ],
@@ -223,7 +223,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "dindoneau"
             ],
@@ -233,7 +233,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "sapajou"
             ],
@@ -243,7 +243,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "baob"
             ],
@@ -253,7 +253,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "baobab"
             ],
@@ -263,7 +263,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "hutre"
             ],
@@ -273,7 +273,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "cl\u00e9mentine"
             ],
@@ -283,7 +283,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "truelle"
             ],
@@ -293,7 +293,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "trag\u00e9die"
             ],
@@ -303,7 +303,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "spoil"
             ],
@@ -313,7 +313,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "rage positive"
             ],
@@ -323,7 +323,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "mmmmhhhhh"
             ],
@@ -333,7 +333,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ah d'acc"
             ],
@@ -343,7 +343,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "wesh wesh"
             ],
@@ -353,7 +353,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "ayayaya"
             ],
@@ -363,7 +363,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "cogito ergo soum soum"
             ],
@@ -373,7 +373,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "charon oignon"
             ],
@@ -383,7 +383,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "shift key\nwoaaa"
             ],
@@ -393,7 +393,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "donc le probl\u00e8me c'est shift entr\u00e9"
             ],
@@ -403,7 +403,7 @@
         },
         {
             "avatar": "https://cdn.discordapp.com/avatars/708123012989190194/0746281492ccca22095505ba188ed3da.webp?size=1024",
-            "name": "Bobotux",
+            "name": "Botux",
             "content": [
                 "salut les bros c lrb"
             ],

@@ -25,7 +25,7 @@ class MyBot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.ipc = ipc.Server(self, secret_key=IPC_Pass)  # create our IPC Server
+        self.ipc = ipc.Server(self, secret_key=IPC_Pass,host='localhost')  # mettre 0.0.0.0 si serveur
         for extension in initial_extentions:
             self.load_extension(extension)
 
