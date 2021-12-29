@@ -1,27 +1,2 @@
 [
-    {
-        "date": "Le 29/12/2021 a 00:05:14",
-        "ip": "86.195.220.144",
-        "path": "./QuartApp/static/image/ubResult/d3_classic_122900060449.png"
-    },
-    {
-        "date": "Le 29/12/2021 a 00:05:28",
-        "ip": "86.195.220.144",
-        "path": "./QuartApp/static/image/ubResult/d3_classic_122900531543.png"
-    },
-    {
-        "date": "Le 29/12/2021 a 00:09:50",
-        "ip": "86.195.220.144",
-        "path": "./QuartApp/static/image/ubResult/d3_classic_122900041357.png"
-    },
-    {
-        "date": "Le 29/12/2021 a 00:11:15",
-        "ip": "86.195.220.144",
-        "path": "/bravery/static/image/ubResult/d3_classic_122900767480.png"
-    },
-    {
-        "date": "Le 29/12/2021 a 00:22:44",
-        "ip": "86.195.220.144",
-        "path": "/bravery/static/image/ubResult/d3_classic_122900741403.png"
-    }
 ]

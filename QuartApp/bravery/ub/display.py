@@ -12,7 +12,7 @@ import os
 color = (170,170,170)
 
 def AddText(text,size,x,y):
-    font = ImageFont.truetype("./QuartApp/bravery/static/fonts/Beaufort.ttf",size)
+    font = ImageFont.truetype("./bravery/static/fonts/Beaufort.ttf",size)
     draw = ImageDraw.Draw(bg)
     draw.text((x,y),text,font=font,fill=color)
 
@@ -27,9 +27,9 @@ def AddBord(img,x,y):
 
 def AddImg(url,x,y,bord=False,size=None,alpha=False):
 
-    out = path = "./QuartApp/bravery/ressources/tempImage.png"
+    out = path = "./bravery/ressources/tempImage.png"
     if ".svg" in url :
-        out = "./QuartApp/bravery/ressources/tempImage.svg"
+        out = "./bravery/ressources/tempImage.svg"
 
     response = requests.get(url,stream=True, headers={'User-agent': 'Mozilla/5.0'})
     if response.status_code == 200:
@@ -65,7 +65,7 @@ def AddImg(url,x,y,bord=False,size=None,alpha=False):
     bg.paste(img,(x,y))
 
 def MiseFormeTexte(texte,x,y,w=9999,sfont = 35): # sfont ( taille de base ) = 35
-    font = ImageFont.truetype("./QuartApp/bravery/static/fonts/Beaufort.ttf",sfont)
+    font = ImageFont.truetype("./bravery/static/fonts/Beaufort.ttf",sfont)
     if font.getsize(texte)[0] > w :
         sfont -= 1
         MiseFormeTexte(texte,w,x,y,sfont)

@@ -25,4 +25,4 @@ botixBP.register_blueprint(configBP,url_prefix='/config')
 
 @botixBP.route("/")
 async def hello():
-    return redirect("/botix/place_publique")
+    return redirect("/botix/fortune")

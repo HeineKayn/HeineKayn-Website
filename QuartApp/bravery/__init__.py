@@ -14,8 +14,8 @@ ubBlueprint = Blueprint('bravery', __name__, template_folder='templates', static
 
 # ---------------
 
-logPath = "./QuartApp/bravery/static/txt/logs.txt"
-ubImgPath = "./QuartApp/bravery/static/image/ubResult"
+logPath = "./bravery/static/txt/logs.txt"
+ubImgPath = "./bravery/static/image/ubResult"
 dateFormat = "Le %d/%m/%Y a %H:%M:%S"
 echeanceLog = 1
 
@@ -29,7 +29,7 @@ def clearOldBravery():
             dateThen = datetime.strptime(log["date"],dateFormat)
             if dateNow > dateThen :
                 logs.pop(index) # On enlève de log.txt
-                path = "./QuartApp/bravery" + log["path"][1:]
+                path = "./bravery" + log["path"][1:]
                 os.remove(path)
 
     with open(logPath, 'w') as f:
@@ -64,7 +64,7 @@ async def startBravery():
     img.save(path)
 
     # On écrit dans les logs
-    path = path.replace("./QuartApp","")
+    path = path.replace("./","/")
 
     with open(logPath, "r") as f:
         logs = json.load(f)
