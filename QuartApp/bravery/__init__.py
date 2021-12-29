@@ -10,7 +10,7 @@ from bravery.ub.display import Displayer
 
 # ---------------
 
-ubBlueprint = Blueprint('webBravery', __name__, template_folder='templates', static_folder='static', url_prefix='/bravery')
+ubBlueprint = Blueprint('bravery', __name__, template_folder='templates', static_folder='static')
 
 # ---------------
 
