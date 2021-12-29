@@ -1,0 +1,5 @@
+{
+    "avatar": "https://cdn.discordapp.com/attachments/785215626687414283/925485140677914664/220.png",
+    "pseudo": "Botux",
+    "reponse": "Merci mais je m'en bats les couilles\nC'est entendu\nD'accord mek\nL\u00e2che moi la grappe ok?? "
+}
