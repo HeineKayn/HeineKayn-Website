@@ -16,7 +16,8 @@ initial_extentions = [
     "cogs.context",
     "cogs.message",
     "cogs.config",
-    "cogs.dm"
+    "cogs.dm",
+    "cogs.reactions"
 ]
 
 # --------------
@@ -24,13 +25,15 @@ initial_extentions = [
 class MyBot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
         self.ipc = ipc.Server(self, secret_key=IPC_Pass,host='localhost')  # mettre 0.0.0.0 si serveur
+
+    async def on_ready(self):
+
         for extension in initial_extentions:
             self.load_extension(extension)
 
-    async def on_ready(self):
         print("Bot is ready.")
+        
 
     async def on_ipc_ready(self):
         print("Ipc is ready.")
