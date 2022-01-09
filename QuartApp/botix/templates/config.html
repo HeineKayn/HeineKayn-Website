@@ -40,13 +40,13 @@
 				<input type="number" class="configInput" id="addKeyInput" spellcheck="false" placeholder="0">
 				<button class="config_button" reference="addKeyInput" onclick="AddKey(this)">Générer</button>
 				<p class="flasher" id="success_key">Success</p>
-			</div>
 
-			<!--
-				couleur et nom du rôle sur tel serveur
-				apparence du site ?
-				manager les clés des coffres mf (en générer + les afficher)
-			-->
+				<div id="key_displayer">
+					{% for cle in config.cles %}
+						<span>{{ cle }}</span>
+					{% endfor %}
+				</div>
+			</div>
 
 		</div>
 	</div>

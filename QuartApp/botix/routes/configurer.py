@@ -13,6 +13,14 @@ keyPath = './botix/static/keys.txt'
 async def config():
 	app = current_app.config["ipc_client"]
 	config = await app.request("get_config")
+
+	try :
+		with open(keyPath) as json_file:
+			keys = json.load(json_file)	
+			config["cles"] = keys
+	except:
+		pass
+
 	return await render_template('config.html',config=config)
 
 @configBP.route("/config_element", methods=['POST'])

@@ -96,3 +96,14 @@
 #success_key{
 	color:green;
 }
+
+#key_displayer{
+	margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3136;
+    padding: 10px;
+    height: 5vw;
+    overflow: auto;
+    width: 60%;
+}
