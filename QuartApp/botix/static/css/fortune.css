@@ -83,6 +83,10 @@
 	filter: opacity(100%);
 }
 
+.coffre_open{
+	position: relative;
+}
+
 .coffre_chiffre{
 	position: absolute;
     margin-left: 157px;
