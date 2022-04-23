@@ -18,6 +18,8 @@ class BDD():
 		host = os.getenv('DB_Host')
 		port = int(os.getenv('DB_Port'))
 
+		print(user,password,host,port)
+
 		try:
 			conn = mariadb.connect(
 				user=user,
