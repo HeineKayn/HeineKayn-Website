@@ -1,0 +1,479 @@
+{% extends "basePir.html" %} {% block content %}
+
+<!-- Carousel -->
+<div id="candidatsCarousel" class="carousel slide" data-bs-interval="false" data-ride="carousel" data-pause="hover">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="0" class="active">
+            <img src="../static/image/arthaud.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="1">
+            <img src="../static/image/dupont-aignan.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="2">
+            <img src="../static/image/hidalgo.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="3">
+            <img src="../static/image/jadot.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="4">
+            <img src="../static/image/lassalle.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="5">
+            <img src="../static/image/lepen.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="6">
+            <img src="../static/image/macron.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="7">
+            <img src="../static/image/melenchon.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="8">
+            <img src="../static/image/pecresse.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="9">
+            <img src="../static/image/poutou.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="10">
+            <img src="../static/image/roussel.jpg">
+        </button>
+        <button type="button" data-bs-target="#candidatsCarousel" data-bs-slide-to="11">
+            <img src="../static/image/zemmour.jpg">
+        </button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+
+        <!-- Arthaud -->
+        <div class="carousel-item active">
+            <div class="container mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/arthaud.jpg">
+                    <div>
+                        <h2>Nathalie ARTHAUD</h2>
+                        <h3>Lutte Ouvrière (LO)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Nathalie Arthaud, née le 23 février 1970 à Peyrins (Drôme), est une enseignante et femme politique française. Depuis 2008, elle est la porte-parole du parti d'extrême gauche Lutte ouvrière (LO). </h5>
+                        <br>
+                        <h5>Entre 2008 et 2014, elle est conseillère municipale de Vaulx-en-Velin. Candidate de LO à l'élection présidentielle de 2012, elle obtient 0,56 % des voix, puis lors de l'élection présidentielle de 2017 elle obtient 0,64 % des suffrages.
+                        </h5>
+                    </div>
+                </div>
+                <div id="chart-list" class="overflow-auto">
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <canvas id="chart1a"></canvas>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique montre l'exposition du candidat au fil du temps, il est possible que ses soutiens apparaissent aussi.
+                                Appuyez sur un nom pour le cacher du graphe
+                            </p>
+                        </div>
+                    </div>
+                                  
+                    <div class="card chart-container">
+                        <canvas id="chart1b"></canvas>
+                    </div>
+                    <div class="card chart-container">
+                        <canvas id="chart1c"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dupont-Aignan -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/dupont-aignan.jpg">
+                    <div>
+                        <h2>Nicolas DUPONT-AIGNAN</h2>
+                        <h3>Debout la France (DLF)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Nicolas Dupont-Aignan, né le 7 mars 1961 à Paris 15e, est un homme politique français.</h5>
+                        <br>
+                        <h5>Énarque, il est successivement membre du Rassemblement pour la République (RPR), du Rassemblement pour la France (RPF) et de l'Union pour un mouvement populaire (UMP), avant de fonder en parallèle et de prendre la présidence de
+                            Debout la France (DLF) — anciennement Debout la République (DLR) —, courant politique qu’il transforme en un parti se réclamant du gaullisme et du souverainisme. </h5>
+                        <br>
+                        <h5>Il est maire d'Yerres (Essonne) de 1995 à 2017 et député de l’Essonne depuis 1997. </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart2a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart2b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart2c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hidalgo -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/hidalgo.jpg">
+                    <div>
+                        <h2>Anne HIDALGO</h2>
+                        <h3>Parti socialiste (PS)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Ana María Hidalgo Aleu, dite Anne Hidalgo, née le 19 juin 1959 à San Fernando (Espagne), est une femme politique française possédant également la nationalité espagnole. </h5>
+                        <br>
+                        <h5>Membre du Parti socialiste (PS), elle est première adjointe au maire de Paris de 2001 à 2014 et conseillère régionale d'Île-de-France de 2004 à 2014. À l'issue des élections municipales de 2014, elle devient la première femme maire
+                            de Paris ; elle est réélue à la suite des élections municipales de 2020. </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart3a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart3b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart3c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jadot -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/jadot.jpg">
+                    <div>
+                        <h2>Yannick JADOT</h2>
+                        <h3>Verts</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Yannick Jadot, né le 27 juillet 1967 à Clacy-et-Thierret (Aisne), est un militant écologiste et homme politique français. </h5>
+                        <br>
+                        <h5>Il est membre des Verts à partir de 1999 et directeur des campagnes de Greenpeace France de 2002 à 2008. Tête de liste d'Europe Écologie dans la circonscription Ouest lors des élections européennes de 2009, il est élu député européen,
+                            mandat qu'il occupe depuis. </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart4a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart4b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart4c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Lassalle -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/lassalle.jpg">
+                    <div>
+                        <h2>Jean LASSALLE</h2>
+                        <h3>Résistons</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Jean Lassalle, né le 3 mai 1955 à Lourdios-Ichère (Basses-Pyrénées, aujourd'hui Pyrénées-Atlantiques), est un homme politique français. </h5>
+                        <br>
+                        <h5>Il est maire de Lourdios-Ichère de 1977 à 2017 et député depuis 2002. Remarqué pour ses interventions à l'Assemblée nationale, il acquiert une notoriété nationale avec sa grève de la faim pour éviter le départ de la vallée d'Aspe
+                            de l’usine Toyal. Il est candidat à l'élection présidentielle de 2017, et fonde le mouvement Résistons pour soutenir cette dernière. Il finit en septième position sur onze candidats. </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart5a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart5b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart5c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Lepen -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/lepen.jpg">
+                    <div>
+                        <h2>Marine LE PEN</h2>
+                        <h3>Rassemblement National (FN)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Marine Le Pen, née le 5 août 1968 à Neuilly-sur-Seine (Hauts-de-Seine), est une femme politique française. </h5>
+                        <br>
+                        <h5>Elle s'engage dès sa majorité au sein du Front national (FN), le principal parti d'extrême droite en France, dirigé par son père Jean-Marie Le Pen. Elle occupe plusieurs mandats locaux à partir de 1998 (conseillère régionale d'Île-de-France,
+                            du Nord-Pas-de-Calais puis des Hauts-de-France, conseillère municipale d'Hénin-Beaumont) et siège de 2004 à 2017 au Parlement européen, où elle co-préside le groupe Europe des nations et des libertés (ENL) à partir de 2015.
+                        </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart6a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart6b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart6c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Macron -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/macron.jpg">
+                    <div>
+                        <h2>Emmanuelle MACRON</h2>
+                        <h3>La République En Marche (LREM)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Emmanuel Macron, né le 21 décembre 1977 à Amiens (France), est un haut fonctionnaire et homme d'État français. Il est président de la République française depuis le 14 mai 2017. </h5>
+                        <br>
+                        <h5>En 2016, il fonde et prend la présidence de son propre mouvement politique, baptisé En marche, et démissionne du gouvernement Valls. Il adopte un positionnement hostile au clivage gauche-droite et se présente à l'élection présidentielle
+                            de 2017. Il l'emporte au second tour face à la candidate du Front national, Marine Le Pen, avec 66,1 % des suffrages exprimés. À 39 ans, il devient le plus jeune président français et le plus jeune dirigeant du G20 du moment.
+                        </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart7a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart7b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart7c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mélenchon -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/melenchon.jpg">
+                    <div>
+                        <h2>Jean-Luc MELENCHON</h2>
+                        <h3>La France Insoumise (LFI)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Jean-Luc Mélenchon, né le 19 août 1951 à Tanger (Maroc), est un homme politique français. </h5>
+                        <br>
+                        <h5>Membre du Parti socialiste (PS) à partir de 1976, il est successivement élu conseiller municipal de Massy en 1983, conseiller général de l'Essonne en 1985 et sénateur en 1986. Il est également ministre délégué à l'Enseignement
+                            professionnel de 2000 à 2002, dans le gouvernement Lionel Jospin. Il fait partie de l'aile gauche du PS jusqu'au congrès de Reims de 2008, à l'issue duquel il quitte ce parti pour fonder le Parti de gauche (PG), dont il devient
+                            d'abord président du bureau national, puis coprésident, fonction qu'il conserve jusqu'en 2014. </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart8a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart8b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart8c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pécresse -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/pecresse.jpg">
+                    <div>
+                        <h2>Valérie PECRESSE</h2>
+                        <h3>Les Républicains (LR)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Valérie Pécresse, née Roux le 14 juillet 1967 à Neuilly-sur-Seine, est une femme politique française. </h5>
+                        <br>
+                        <h5>Elle est enseignante à l'Institut d'études politiques de Paris de 1992 à 1998, maître des requêtes au Conseil d'État de 1992 à 2015, conseillère du président de la République Jacques Chirac après 1997. </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart9a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart9b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart9c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Poutou -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/poutou.jpg">
+                    <div>
+                        <h2>Philippe POUTOU</h2>
+                        <h3>Nouveau Parti Anticapitaliste (NPA)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Philippe Poutou, né le 14 mars 1967 à Villemomble (alors dans le département de la Seine), est un ouvrier, syndicaliste et homme politique français. </h5>
+                        <br>
+                        <h5>Ouvrier dans une usine Ford, il milite dans les rangs de la CGT contre la fermeture de celle-ci, qui a finalement lieu en 2019. Il s'engage dans des partis d'extrême gauche, à savoir Lutte ouvrière (LO) puis la Ligue communiste
+                            révolutionnaire (LCR), qui devient en 2007 le Nouveau Parti anticapitaliste (NPA). </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart10a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart10b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart10c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Roussel -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/roussel.jpg">
+                    <div>
+                        <h2>Fabien ROUSSEL</h2>
+                        <h3>Parti Communiste Français (PCF)</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Fabien Roussel, né le 16 avril 1969 à Béthune, est un homme politique français. </h5>
+                        <br>
+                        <h5>Membre du Parti communiste français (PCF), il est député dans la vingtième circonscription du Nord depuis 2017 et secrétaire national du PCF depuis 2018. Il est désigné candidat du parti pour l’élection présidentielle de 2022.
+                        </h5>
+
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart11a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart11b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart11c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Zemmour -->
+        <div class="carousel-item">
+            <div class="container  mt-5">
+                <div class="candidat-entete">
+                    <img src="../static/image/zemmour.jpg">
+                    <div>
+                        <h2>Eric ZEMMOUR</h2>
+                        <h3>Reconquête</h3>
+                    </div>
+                </div>
+                <div class="candidat-desc">
+                    <div>
+                        <h5>Éric Zemmour, né le 31 août 1958 à Montreuil, est un journaliste, écrivain, essayiste, éditorialiste, chroniqueur, polémiste et homme politique français d'extrême droite. </h5>
+                        <br>
+                        <h5>Diplômé de l'Institut d'études politiques de Paris, il commence une carrière dans la presse écrite en travaillant au Quotidien de Paris de 1986 à 1994. Il rejoint en 1996 le service politique du Figaro, où il reste jusqu'en 2009
+                            et revient en 2013, tout en écrivant des chroniques au Figaro Magazine jusqu’en 2021. </h5>
+                    </div>
+                    <div id="chart-list" class="overflow-auto">
+                        <div class="card chart-container">
+                            <canvas id="chart12a"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart12b"></canvas>
+                        </div>
+                        <div class="card chart-container">
+                            <canvas id="chart12c"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#candidatsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#candidatsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<script src="../static/js/chart.js" type="text/javascript"></script>
+<script>
+    let candidats = ['ARTHAUD', 'DUPONT-AIGNAN', 'HIDALGO', 'JADOT', 'LASSALLE', 'LE PEN', 'MACRON', 'MELENCHON', 'PECRESSE', 'POUTOU', 'ROUSSEL', 'ZEMMOUR']
+    let candidat;
+    let delayInMilliseconds = 1000;
+    for (let i = 1; i < 13; i++) {
+        candidat = candidats[i - 1];
+        updateChart(`candidatExpoTime('line','${candidat}')`, i + 'a');
+        updateChart(`expoByScenario('radar','${candidat}')`, i + 'b');
+        updateChart(`candidatDepthEvol('line','${candidat}')`, i + 'c');
+    }
+
+    // updateChart("dureeEtVue('bar')", 1);
+    // delayInMilliseconds = 1000;
+    // for (let chartNb = 2; chartNb < 13; chartNb++) {
+    //     setTimeout(function() {
+    //         updateChart("dureeVue('bar')", chartNb);
+    //     }, delayInMilliseconds);
+    // }
+</script>
+
+
+{% endblock %}

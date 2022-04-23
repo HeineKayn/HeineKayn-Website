@@ -1,0 +1,62 @@
+{% extends "basePir.html" %} {% block content %}
+
+<link rel="stylesheet" href="../static/css/home.css">
+
+<!-- <div class="presentation">
+    <div class="titre" style="font-size: xx-large;">
+        Une égalité de temps d'antenne des candidats à la présidence sur youtube.
+    </div>
+
+    <div class="subtitre">
+        Notre objectif ?
+    </div>
+
+    <div class="explanation">
+        Compter les temps de parole de chaque candidat à la présidentielle 2022 en France sur youtube.
+    </div>
+
+    <div class="subtitre">
+        Pourquoi ?
+    </div>
+
+    <div class="explanation">
+        Les temps d'antenne sont mesurés sur les médias plus traditionnels comme la télévision ou la radio dans un but d'égalité entre les candidats, en revanche, sur les réseaux sociaux comme youtube, rien n'est compté, notre objectif est donc d'essayer de mesurer
+        ces temps de parole pour voir s'ils sont respecté de la même manière que ceux de la télé.
+    </div>
+</div> -->
+
+<div class="donneesDay">
+
+
+    <div class="container mt-5" >
+
+        <h1>Mesure du temps de parole sur youtube</h1>
+
+
+        <div class="card chart-container">
+            <canvas id="chart1"></canvas>
+        </div>
+
+        <h2>Notre objectif ?</h2>
+        <p>Compter les temps de parole de chaque candidat à la présidentielle 2022 en France sur youtube.</p>
+        <h2>Pourquoi</h2>
+        <p>Les temps d'antenne sont mesurés sur les médias plus traditionnels comme la télévision ou la radio dans un but d'égalité entre les candidats, en revanche, sur les réseaux sociaux comme youtube, rien n'est compté, notre objectif est donc d'essayer
+            de mesurer ces temps de parole pour voir s'ils sont respecté de la même manière que ceux de la télé.</p>
+    </div>
+
+    <!-- <a href="/pir/comparateur">
+        <button type="button" class="blueButton">Je veux en voir d'autres !</button>
+    </a> -->
+
+
+</div>
+
+
+<script src="../static/js/chart.js" type="text/javascript"></script>
+<script>
+    updateChart("dureeMulVue('bar')", 1);
+</script>
+
+
+
+{% endblock %}

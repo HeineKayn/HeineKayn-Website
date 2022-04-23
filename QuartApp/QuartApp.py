@@ -37,6 +37,9 @@ app.register_blueprint(botixBP,url_prefix='/botix')
 from bravery import ubBlueprint
 app.register_blueprint(ubBlueprint,url_prefix='/bravery')
 
+from pir import pirBP
+app.register_blueprint(pirBP,url_prefix='/pir')
+
 # ---------------
 
 # Default route

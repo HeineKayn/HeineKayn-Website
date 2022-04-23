@@ -1,0 +1,11 @@
+    .container h1 {
+        font-weight: 800;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .container p {
+            text-align: center;
+        }
+    }
