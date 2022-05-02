@@ -5,12 +5,12 @@ from .bdd import *
 
 chartBP = Blueprint('chart', __name__)
 
-bdd = BDD()
 seuils = [0,2,3]
 seuil = 0
 
 # les vues et duree de chaque candidat en %
 def dureeEtVue(chartType):
+    bdd = BDD()
     avList = bdd.get.dateAverage()
     labels = [x[0] for x in avList]
     duree  = [x[1] for x in avList]
@@ -36,6 +36,7 @@ def dureeEtVue(chartType):
 
 # l'exposition de chaque candidat en %
 def dureeMulVue(chartType):
+    bdd = BDD()
     avList = bdd.get.dateAverage()
     labels = [x[0] for x in avList]
     expo   = [x[1]*x[2] for x in avList]
@@ -59,6 +60,7 @@ def dureeMulVue(chartType):
 
 # pour chaque candidat, évolution de son exposition en fonction du temps
 def candidatExpoTime(chartType,parti):
+    bdd = BDD()
     expoEvol = bdd.get.candidatExpoEvol(parti)
     chart  = multiElement(chartType,"expoTime")
     chart.labels = [x[1].strftime("%d/%m") for x in expoEvol]
@@ -86,6 +88,7 @@ def candidatExpoTime(chartType,parti):
 
 # pour chaque candidat on regarde d'où viennent leur expositions
 def expoByScenario(chartType,parti):
+    bdd = BDD()
     scParti = bdd.get.scenarioParti(parti)
     labels  = [x[0] for x in scParti]
     expo    = [x[1]*x[2] for x in scParti]
@@ -107,6 +110,7 @@ def expoByScenario(chartType,parti):
 
 # Evolution de l'exposition par la pronfondeur et le temps
 def candidatDepthEvol(chartType,parti):
+    bdd = BDD()
     chart        = multiElement(chartType,"expoTime", bgTransparency=.65)
     expoEvol     = bdd.get.candidatExpoEvol(parti)
     chart.labels = [x[1].strftime("%d/%m") for x in expoEvol]
@@ -123,6 +127,7 @@ def candidatDepthEvol(chartType,parti):
 
 # Evolution de l'exposition par la pronfondeur et le temps
 def allCandidatDepth(chartType):
+    bdd = BDD()
     chart        = multiElement(chartType,"expoTime", bgTransparency=.02)
     chart.labels = []
     partis       = bdd.get.allPartis()
