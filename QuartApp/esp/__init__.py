@@ -7,8 +7,6 @@ def getESPDic():
     dic["nbMails"] = nbMails
     dic["nbMailsPrio"] = nbMailsPrio
 
-    
-
     # dic = {
     #     "info1" : 2,
     #     "info2" : 3,

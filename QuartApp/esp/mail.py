@@ -2,11 +2,16 @@ import imaplib
 from email.header import decode_header
 from email.parser import BytesHeaderParser
 
-def getMails():
+from dotenv import load_dotenv
+import os
 
-    # account credentials
-    username = "thomashoger@hotmail.fr"
-    password = "RlAcahjA2QG2Picu5xnv"
+load_dotenv()
+
+# account credentials
+username = os.getenv('MAIL_Password')
+password = os.getenv('MAIL_Username')
+
+def getMails():
 
     # create an IMAP4 class with SSL 
     imap = imaplib.IMAP4_SSL("imap-mail.outlook.com")
