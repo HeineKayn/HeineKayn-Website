@@ -1,4 +1,4 @@
-from quart import Quart, redirect
+from quart import Quart, redirect, request
 import os
 
 # ---------------
@@ -40,12 +40,22 @@ app.register_blueprint(ubBlueprint,url_prefix='/bravery')
 from pir import pirBP
 app.register_blueprint(pirBP,url_prefix='/pir')
 
+from esp import getESPDic
+
 # ---------------
+
+@app.route("/esp", methods=['POST'])
+async def esp():
+    # data = await request.form
+    # func = data["func"]
+    # size = int(data["size"])
+    dic = getESPDic()
+    return dic
 
 # Default route
 @app.route("/")
 def default():
-    return redirect("/botix/place_publique")
+    return redirect("/pir")
 
 # ---------------
 
