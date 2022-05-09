@@ -1,6 +1,9 @@
 from quart import Quart, redirect, request
 import os
 
+import quart.flask_patch
+from pir.routes.cache import cache
+
 # ---------------
 
 from dotenv import load_dotenv
@@ -20,6 +23,15 @@ app.config.from_mapping(QUART_AUTH_COOKIE_HTTP_ONLY = False)
 app.config.from_mapping(QUART_AUTH_COOKIE_SECURE    = False)
 app.config.from_mapping(QUART_AUTH_COOKIE_SECURE    = False)
 
+config = {
+    "DEBUG": True,                # some Flask specific configs
+    "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
+
+app.config.from_mapping(config)
+cache.init_app(app)
+
 # ---------------
 
 from discord.ext.ipc import Client
@@ -31,11 +43,11 @@ app.config["ipc_client"] = ipc_client
 
 # ---------------
 
-from botix import botixBP
-app.register_blueprint(botixBP,url_prefix='/botix')
+# from botix import botixBP
+# app.register_blueprint(botixBP,url_prefix='/botix')
 
-from bravery import ubBlueprint
-app.register_blueprint(ubBlueprint,url_prefix='/bravery')
+# from bravery import ubBlueprint
+# app.register_blueprint(ubBlueprint,url_prefix='/bravery')
 
 from pir import pirBP
 app.register_blueprint(pirBP,url_prefix='/pir')
@@ -49,7 +61,8 @@ async def esp():
     # data = await request.form
     # func = data["func"]
     # size = int(data["size"])
-    dic = getESPDic()
+    # dic = getESPDic()
+    dic = {}
     return dic
 
 # Default route
