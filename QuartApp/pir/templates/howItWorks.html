@@ -1,17 +1,74 @@
 {% extends "basePir.html" %} {% block content %}
 
+<link rel="stylesheet" href="../static/css/how_it_works.css">
+
 <div class="container  mt-5">
 
-    <h2>Comment ça marche ?</h2>
+    <h1>Comment ça marche ?</h1>
 
-    <h5>
-        Un bot qui récolte des données.
-    </h5>
+    <div class="separator"></div>
 
-    <h5>
-        Traitement.
-    </h5>
+    <div class="text-container">
+
+        <h3>
+            Récolte des données
+        </h3>
+
+        <p>
+            Ne connaissant pas l'algorithme de recommendation de YouTube nous avons décidé d'utiliser un web scrapper au lieu d'une API. Le but est de faire passer nos profils automatisés (nos bots) pour de vrais utilisateurs. Nous pouvons ainsi avoir le contrôle
+            sur la personnalisation réalisé par YouTube au visionnage de vidéo. On choisit alors une routine (un enchainement d'action à réaliser automatiquement) qui permettra de récupérer des données à différentes étapes d'un processus de personnalisation.
+            Ainsi nous avons pu imaginer plusieurs scénarios et créer plusieurs profils type pour chacunes des catégories suivantes.
+        </p>
+
+        <ul>
+            <li><b>Partisans politiques : </b>12 bots (1 pour chaque candidat)</li>
+            <li><b>YouTubers politique : </b><a data-bs-toggle="tooltip" data-bs-placement="right" title="Hugo Décrypte, Jean Massiet et Osons Causer">3 bots <i class="fas fa-question-circle"></i></a></li>
+            <li><b>Nouveau médias : </b><a data-bs-toggle="tooltip" data-bs-placement="right" title="Brut, Konbini, Aj+">3 bots <i class="fas fa-question-circle"></i></a></li>
+            <li><b>Radios : </b><a data-bs-toggle="tooltip" data-bs-placement="right" title="Europe 1, RMC, RTL, France Inter, France Culture, France Info, Sud Radio">7 bots <i class="fas fa-question-circle"></i></a></li>
+            <li><b>Chaines Télé : </b><a data-bs-toggle="tooltip" data-bs-placement="right" title="BFM Buisness, C8, France 24, LCI, RMCTV, BFMTV">6 bots <i class="fas fa-question-circle"></i></a></li>
+        </ul>
+
+        <p class="section-end-text">
+            On récupère des informations concernant les vidéos rencontrées comme leur durée, nombre de vues qu'on stock sur le serveur d'un membre du projet. On trie ensuite les vidéos utiles grâce à un parser qui détecte si le nom/prénom des candidats ou de leurs
+            principaux soutiens apparait dans le titre des vidéos rencontrées.
+        </p>
+
+        <img id="diagram" src="../static/image/diagram.png"/>
+
+        <h3>
+            Vocabulaire
+        </h3>
+
+        <p class="section-end-text">
+            <b>Exposition :</b> Produit de la durée d'une vidéo par son nombre de vue, elle représente la visibilité d'un candidat.
+            </br>Cette mesure n'est cependant pas sans faille car le nombre de vu est variable et peut faire gonfler les résultats d'un candidat par rapport aux autres. Laisser l'exposition sans restriction de durée est aussi un problème car beaucoup
+            de vidéos concernant les candidats étaient déjà présentes sur YouTube avant la campagne présidentielle de 2022 et ne sont donc pas forcément pertinentes.
+        </p>
+        <p class="section-end-text">
+            <b>Norme :</b> La norme utilisée pour le 3ème graphique des pages candidat utilise une norme L2.
+            </br> Sa formule est : <img src="../static/image/l2-norm.png" />
+        </p>
+
+        <p class="section-end-text">
+            <b>Recommendation :</b> Une vidéo recommendée est une vidéo que l'algorithme YouTube suggère à un utilisateur.
+            </br>Dans notre cas les recommendations prise en compte sont celles de la page d'accueil</p>
+
+        <p class="section-end-text">
+            <b>Personnalisation :</b> L'algorithme de recommendation est influencée par les vidéos que vous regardez, on appelle ça la personnalisation. Cependant cet algorithme étant une "boite noire" il n'est pas possible de connaitre son fonctionnement
+            exact. C'est pour contrer ce biais que nous utilisons plusieurs scénarios avec différentes personnalisation.
+        </p>
+
+
+
+    </div>
 
 </div>
+
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
 
 {% endblock %}

@@ -56,6 +56,7 @@
                         <h3>Lutte Ouvrière (LO)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Nathalie Arthaud, née le 23 février 1970 à Peyrins (Drôme), est une enseignante et femme politique française. Depuis 2008, elle est la porte-parole du parti d'extrême gauche Lutte ouvrière (LO). </h5>
@@ -65,24 +66,56 @@
                     </div>
                 </div>
                 <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
                     <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart1a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart1a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
                         <div class="tips-container">
                             <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
                             <p class="tips">
-                                Ce graphique montre l'exposition du candidat au fil du temps, il est possible que ses soutiens apparaissent aussi. Appuyez sur un nom pour le cacher du graphe
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
                             </p>
                         </div>
                     </div>
 
-                    <div class="card chart-container">
-                        <canvas id="chart1b"></canvas>
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart1b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
                     </div>
-                    <div class="card chart-container">
-                        <canvas id="chart1c"></canvas>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/lo.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -96,6 +129,7 @@
                         <h3>Debout la France (DLF)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Nicolas Dupont-Aignan, né le 7 mars 1961 à Paris 15e, est un homme politique français.</h5>
@@ -106,17 +140,58 @@
                         <h5>Il est maire d'Yerres (Essonne) de 1995 à 2017 et député de l’Essonne depuis 1997. </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart2a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart2a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart2b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart2c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart2b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/dlf.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -130,6 +205,7 @@
                         <h3>Parti socialiste (PS)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Ana María Hidalgo Aleu, dite Anne Hidalgo, née le 19 juin 1959 à San Fernando (Espagne), est une femme politique française possédant également la nationalité espagnole. </h5>
@@ -138,17 +214,58 @@
                             de Paris ; elle est réélue à la suite des élections municipales de 2020. </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart3a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart3a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart3b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart3c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart3b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/ps.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -162,6 +279,7 @@
                         <h3>Verts</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Yannick Jadot, né le 27 juillet 1967 à Clacy-et-Thierret (Aisne), est un militant écologiste et homme politique français. </h5>
@@ -170,17 +288,58 @@
                             mandat qu'il occupe depuis. </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart4a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart4a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart4b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart4c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart4b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/eelv.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -194,25 +353,66 @@
                         <h3>Résistons</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Jean Lassalle, né le 3 mai 1955 à Lourdios-Ichère (Basses-Pyrénées, aujourd'hui Pyrénées-Atlantiques), est un homme politique français. </h5>
                         <br>
                         <h5>Il est maire de Lourdios-Ichère de 1977 à 2017 et député depuis 2002. Remarqué pour ses interventions à l'Assemblée nationale, il acquiert une notoriété nationale avec sa grève de la faim pour éviter le départ de la vallée d'Aspe
                             de l’usine Toyal. Il est candidat à l'élection présidentielle de 2017, et fonde le mouvement Résistons pour soutenir cette dernière. Il finit en septième position sur onze candidats. </h5>
+                    </div>
+                </div>
+                <div id="chart-list" class="overflow-auto">
 
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart5a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
+                        </div>
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart5a"></canvas>
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart5b"></canvas>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart5b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart5c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/resistons.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -223,9 +423,10 @@
                     <img src="../static/image/lepen.jpg">
                     <div>
                         <h2>Marine LE PEN</h2>
-                        <h3>Rassemblement National (FN)</h3>
+                        <h3>Rassemblement National (RN)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Marine Le Pen, née le 5 août 1968 à Neuilly-sur-Seine (Hauts-de-Seine), est une femme politique française. </h5>
@@ -235,17 +436,58 @@
                         </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart6a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart6a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart6b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart6c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart6b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/rn.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -259,6 +501,7 @@
                         <h3>La République En Marche (LREM)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Emmanuel Macron, né le 21 décembre 1977 à Amiens (France), est un haut fonctionnaire et homme d'État français. Il est président de la République française depuis le 14 mai 2017. </h5>
@@ -268,17 +511,58 @@
                         </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart7a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart7a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart7b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart7c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart7b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/lrem.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -292,6 +576,7 @@
                         <h3>La France Insoumise (LFI)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Jean-Luc Mélenchon, né le 19 août 1951 à Tanger (Maroc), est un homme politique français. </h5>
@@ -301,17 +586,58 @@
                             d'abord président du bureau national, puis coprésident, fonction qu'il conserve jusqu'en 2014. </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart8a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart8a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart8b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart8c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart8b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/lfi.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -325,6 +651,7 @@
                         <h3>Les Républicains (LR)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Valérie Pécresse, née Roux le 14 juillet 1967 à Neuilly-sur-Seine, est une femme politique française. </h5>
@@ -332,17 +659,58 @@
                         <h5>Elle est enseignante à l'Institut d'études politiques de Paris de 1992 à 1998, maître des requêtes au Conseil d'État de 1992 à 2015, conseillère du président de la République Jacques Chirac après 1997. </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart9a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart9a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart9b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart9c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart9b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/lr.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -356,6 +724,7 @@
                         <h3>Nouveau Parti Anticapitaliste (NPA)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Philippe Poutou, né le 14 mars 1967 à Villemomble (alors dans le département de la Seine), est un ouvrier, syndicaliste et homme politique français. </h5>
@@ -364,17 +733,58 @@
                             révolutionnaire (LCR), qui devient en 2007 le Nouveau Parti anticapitaliste (NPA). </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart10a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart10a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart10b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart10c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart10b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/npa.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -388,6 +798,7 @@
                         <h3>Parti Communiste Français (PCF)</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Fabien Roussel, né le 16 avril 1969 à Béthune, est un homme politique français. </h5>
@@ -396,17 +807,58 @@
                         </h5>
 
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart11a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart11a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart11b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart11c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart11b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/pcf.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -420,6 +872,7 @@
                         <h3>Reconquête</h3>
                     </div>
                 </div>
+                <div class="separator"></div>
                 <div class="candidat-desc">
                     <div>
                         <h5>Éric Zemmour, né le 31 août 1958 à Montreuil, est un journaliste, écrivain, essayiste, éditorialiste, chroniqueur, polémiste et homme politique français d'extrême droite. </h5>
@@ -427,17 +880,58 @@
                         <h5>Diplômé de l'Institut d'études politiques de Paris, il commence une carrière dans la presse écrite en travaillant au Quotidien de Paris de 1986 à 1994. Il rejoint en 1996 le service politique du Figaro, où il reste jusqu'en 2009
                             et revient en 2013, tout en écrivant des chroniques au Figaro Magazine jusqu’en 2021. </h5>
                     </div>
-                    <div id="chart-list" class="overflow-auto">
+                </div>
+                <div id="chart-list" class="overflow-auto">
+
+                    <h2>Exposition du candidat par jour</h2>
+                    <div class="chart-tips-container">
                         <div class="card chart-container">
-                            <canvas id="chart12a"></canvas>
+                            <p>Exposition (10<sup>-9</sup> secondes)</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart12a"></canvas>
+                                <p>Temps (jours)</p>
+                            </div>
                         </div>
-                        <div class="card chart-container">
-                            <canvas id="chart12b"></canvas>
-                        </div>
-                        <div class="card chart-container">
-                            <canvas id="chart12c"></canvas>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente l'évolution de l'exposition d'un candidat en fonction du temps. Il permet de constater les différentes tendances au cours de la campagne. Deux dates notables sont le 10 avril et le 24 avril 2022 représentant respectivement les
+                                dates de votes du premier et du second tour.
+                            </p>
                         </div>
                     </div>
+
+                    <h2>Provenance de l'exposition d'un candidat par scénario</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <p class="middle-legend">Pourcentage de l'exposition total</p>
+                            <div class="chart-right-legend">
+                                <canvas id="chart12b"></canvas>
+                            </div>
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                On peut ici voir d'où provient l'exposition de chaque candidat entre les différentes catégories. Les détails des catégories sont présentés dans l'onglet "Comment ça marche".
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Proximité des partisans auprès du candidat</h2>
+                    <div class="chart-tips-container">
+                        <div class="card chart-container">
+                            <img src="../static/image/graphs/reconquete.png">
+                        </div>
+                        <div class="tips-container">
+                            <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                            <p class="tips">
+                                Ce graphique représente à quel point la personnalisation en un profil partisan du candidat étudié fait suggérer par l'algorithme des vidéos des autres candidats. En rouge on peut voir le nombre de vidéo récolté en fonction du niveau de personnalisation.
+                                Le bleu représente le nombre de vidéo normé par rapport au total. Cette mesure permet de comparer tous les diagrammes entre eux. En effet si le graphique bleu décroit mais que le rouge augmente alors on peut en déduire
+                                que le nombre de vidéo récolté décroit moins vite par rapport aux autres candidats.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

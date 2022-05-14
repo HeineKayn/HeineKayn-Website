@@ -1,11 +1,9 @@
-    .container h1 {
-        font-weight: 800;
-        margin-bottom: 3%;
+@media (min-width: 768px) {
+    .container p {
         text-align: center;
     }
+}
 
-    @media (min-width: 768px) {
-        .container p {
-            text-align: center;
-        }
-    }
+.chart-container>p {
+    text-align: left;
+}

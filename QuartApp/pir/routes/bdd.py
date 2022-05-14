@@ -153,15 +153,24 @@ def allSoutiens(cur,parti):
 	soutiens = cur.fetchall()
 	return [x[0] for x in soutiens]
 
+# ------------ GET Stats about bot
 
+@bddConnect
+def nbVideo(cur):
+	cur.execute("""SELECT COUNT(*)
+	 			   FROM Video""")
+	return cur.fetchone()[0]
 
-
-
+@bddConnect
+def nbVideo(cur):
+	cur.execute("""SELECT COUNT(*)
+	 			   FROM Video""")
+	return cur.fetchone()[0]
 
 
 if __name__ == "__main__" :
 
-	print(allPartis())
+	
 	
 	
 	# bdd.manage.renewTables()
@@ -178,30 +187,7 @@ if __name__ == "__main__" :
 	# bdd.cur.execute("SELECT DISTINCT scenario FROM Video")
 	# bdd.cur.execute("DESCRIBE Video")
 
-	# bdd.cur.execute("""SELECT soutien, (SUM(duree)*SUM(vue))/1000000000 AS expo, date, COUNT(*)
-	#  			   FROM Video
-	# 			   WHERE parti = 'MELENCHON'
-	# 			   GROUP BY parti, date, soutien
-	#  			   ORDER BY date""")
+	res = nbVideo()
+	print(res)
 
-	# for x in bdd.cur :
-	# 	print(x)
-
-
-	# print( bdd.get.scenarioParti("HIDALGO"))
-	# a,x,y = bdd.get.scenarioParti("HIDALGO")
-	# print(sum(x)*sum(y))
-
-
-	# print(bdd.get.allSoutiens("MELENCHON"))
-
-	# query = """SELECT SUM(duree)*CAST(SUM(vue) AS INT)
-	# 			   FROM Video
-	# 			   WHERE 
-	# 			   		parti = %s AND
-	# 			   		profondeur in (1,2,5)
-	# 			   GROUP BY parti,profondeur"""
-	# bdd.cur.execute(query,("MELENCHON",))
-	# x = bdd.cur.fetchall()
-	# x = [y[0] for y in x]
-	# print(x)
+	bdd.disconnect()

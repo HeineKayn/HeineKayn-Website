@@ -4,6 +4,8 @@ from .charts import *
 from .bdd import *
 from .cache import cache
 
+import json
+
 chartBP = Blueprint('chart', __name__)
 seuils = [0,2,3]
 seuil = 0
@@ -92,20 +94,42 @@ def expoByScenario(chartType,parti):
     scParti = scenarioParti(parti)
     labels  = [x[0] for x in scParti]
     expo    = [x[1]*x[2] for x in scParti]
-    expoTot = sum(expo)
-    expo    = [(x/expoTot)*100 for x in expo]
 
-    toremove = []
-    for i,_ in enumerate(expo):
-        if expo[i] < seuils[-1] :
-            toremove.append(i)
+    f = open('./pir/static/groupScenario.txt')
+    group = json.load(f)
+    newLabels = list(group.keys())
+    newExpo   = [0] * len(newLabels)
+    values    = list(group.values())
+
+    f = open('./pir/static/candidatParti.txt')
+    candidatParti = json.load(f)
+
+    for i in range(len(expo)):
+        label = labels[i]
+        exp   = expo[i] 
+        for k in range(len(values)):
+            if label in values[k]:
+
+                if "partisants" in newLabels[k] and label != candidatParti[parti]:
+                    break
+                
+                newExpo[k] += exp
+                break
+
+    expoTot = sum(newExpo)
+    newExpo    = [(x/expoTot)*100 for x in newExpo]
+
+    # toremove = []
+    # for i,_ in enumerate(expo):
+    #     if expo[i] < seuils[-1] :
+    #         toremove.append(i)
             
-    expo      = [x for i,x in enumerate(expo) if i not in toremove]
-    labels    = [x for i,x in enumerate(labels) if i not in toremove]
+    # expo      = [x for i,x in enumerate(expo) if i not in toremove]
+    # labels    = [x for i,x in enumerate(labels) if i not in toremove]
 
     chart  = multiElement(chartType,"expoTime", bgTransparency=.65)
-    chart.labels = labels
-    chart.addValue(parti,expo)
+    chart.labels = newLabels
+    chart.addValue(parti,newExpo)
     return chart.get()
 
 # Evolution de l'exposition par la pronfondeur et le temps
@@ -166,7 +190,5 @@ async def chart():
         seuil = seuils[-2]
     else : 
         seuil = seuils[-3]
-
-    print("chart")
 
     return eval(func)

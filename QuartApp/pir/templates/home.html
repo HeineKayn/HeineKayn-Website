@@ -2,52 +2,46 @@
 
 <link rel="stylesheet" href="../static/css/home.css">
 
-<!-- <div class="presentation">
-    <div class="titre" style="font-size: xx-large;">
-        Une égalité de temps d'antenne des candidats à la présidence sur youtube.
-    </div>
-
-    <div class="subtitre">
-        Notre objectif ?
-    </div>
-
-    <div class="explanation">
-        Compter les temps de parole de chaque candidat à la présidentielle 2022 en France sur youtube.
-    </div>
-
-    <div class="subtitre">
-        Pourquoi ?
-    </div>
-
-    <div class="explanation">
-        Les temps d'antenne sont mesurés sur les médias plus traditionnels comme la télévision ou la radio dans un but d'égalité entre les candidats, en revanche, sur les réseaux sociaux comme youtube, rien n'est compté, notre objectif est donc d'essayer de mesurer
-        ces temps de parole pour voir s'ils sont respecté de la même manière que ceux de la télé.
-    </div>
-</div> -->
-
 <div class="donneesDay">
 
-
-    <div class="container mt-5" >
+    <div class="container mt-5">
 
         <h1>Mesure du temps de parole sur youtube</h1>
 
+        <div class="separator"></div>
 
-        <div class="card chart-container">
-            <canvas id="chart1"></canvas>
+        <h2>Mise en contexte</h2>
+        <p>Les temps d'antenne sont mesurés sur les médias plus traditionnels comme la télévision ou la radio dans un but d'égalité entre les candidats.
+            </br>Cependant, ce n'est pas le cas sur les réseaux sociaux comme YouTube qui est pourtant de nos jours une plateforme majeure d'expression.</p>
+
+        <h2>Notre objectif</h2>
+        <p>Mesurer les temps de parole de chaque candidat à la présidentielle 2022 en France sur YouTube.
+            </br> Voir s'ils sont respecté de la même manière que sur les medias traditionnels.</p>
+
+        <h2>Fonctionnement du site</h2>
+        <p>Ce site présente divers graphs interactifs.
+            </br>Il est possible de cliquer sur la légende pour enlever ou rajouter un élement afficher.</p>
+
+        <div id="chart-list" class="overflow-auto">
+            <div class="chart-tips-container">
+                <div class="card chart-container">
+                    <p>Pourcentage</p>
+                    <div class="chart-right-legend">
+                        <canvas id="chart1"></canvas>
+                        <p>Candidats</p>
+                    </div>
+                </div>
+                <div class="tips-container">
+                    <img src="../static/image/icons/light-removebg-preview-removebg-preview.png" class="tips-icon" alt="tip image" />
+                    <p class="tips">
+                        Mise en relation du score aux elections présidentielles avec la proportion d'exposition totale sur YouTube.
+                        </br>L'objectif est ici de voir si il existe une quelconque relation entre ces deux données.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <h2>Notre objectif ?</h2>
-        <p>Compter les temps de parole de chaque candidat à la présidentielle 2022 en France sur youtube.</p>
-        <h2>Pourquoi</h2>
-        <p>Les temps d'antenne sont mesurés sur les médias plus traditionnels comme la télévision ou la radio dans un but d'égalité entre les candidats, en revanche, sur les réseaux sociaux comme youtube, rien n'est compté, notre objectif est donc d'essayer
-            de mesurer ces temps de parole pour voir s'ils sont respecté de la même manière que ceux de la télé.</p>
     </div>
-
-    <!-- <a href="/pir/comparateur">
-        <button type="button" class="blueButton">Je veux en voir d'autres !</button>
-    </a> -->
-
 
 </div>
 
