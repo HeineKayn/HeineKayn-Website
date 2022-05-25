@@ -5,12 +5,15 @@ from email.parser import BytesHeaderParser
 from dotenv import load_dotenv
 import os
 
+from .cache import cache
+
 load_dotenv()
 
 # account credentials
-username = os.getenv('MAIL_Password')
-password = os.getenv('MAIL_Username')
+username = os.getenv('MAIL_Username')
+password = os.getenv('MAIL_Password')
 
+@cache.cached(timeout=600, key_prefix='getMails')
 def getMails():
 
     # create an IMAP4 class with SSL 
@@ -59,7 +62,11 @@ def getMails():
     imap.close()
     imap.logout()
 
-    print("Nombres mails prio :", nbMailsPrio)
-    print("Nombres mails non lus :", len(uids))
+    # print("Nombres mails prio :", nbMailsPrio)
+    # print("Nombres mails non lus :", len(uids))
 
     return [len(uids),nbMailsPrio]
+
+if __name__ == "__main__":
+    print("run")
+    print(getMails())

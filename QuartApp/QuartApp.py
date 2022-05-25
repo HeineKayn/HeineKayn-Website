@@ -3,6 +3,18 @@ import os
 
 # ---------------
 
+# New
+import quart.flask_patch
+from esp.cache import cache
+
+config = {
+    "DEBUG": True,                # some Flask specific configs
+    "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
+
+# ---------------
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,6 +23,7 @@ app_pass = os.getenv('APP_Pass')
 # ---------------
 
 app = Quart(__name__, static_folder=None)
+cache.init_app(app) # cache
 
 from quart_auth import *
 
@@ -44,7 +57,7 @@ from esp import getESPDic
 
 # ---------------
 
-@app.route("/esp", methods=['POST'])
+@app.route("/esp") # , methods=['POST']
 async def esp():
     # data = await request.form
     # func = data["func"]
