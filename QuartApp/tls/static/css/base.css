@@ -1,0 +1,50 @@
+body {
+    background-color: #2e3438;
+    color: rgb(212, 212, 212);
+    font-family: 'DroidSans'
+}
+
+h1 {
+    padding-top: 1.5vw;
+}
+
+.col-sm,
+.row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #202225;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(15, 17, 19);
+    border-radius: 10px;
+}

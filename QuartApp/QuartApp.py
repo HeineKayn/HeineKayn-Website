@@ -52,6 +52,9 @@ app.config["ipc_client"] = ipc_client
 from pir import pirBP
 app.register_blueprint(pirBP,url_prefix='/pir')
 
+from tls import tlsBP
+app.register_blueprint(tlsBP,url_prefix='/tls')
+
 from esp import getESPDic
 
 # ---------------
