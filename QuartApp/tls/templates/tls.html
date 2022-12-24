@@ -7,13 +7,10 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Jquery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap et Jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Fonawesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -26,6 +23,138 @@
 </head>
 
 <body>
-    <h1 class="text-center">Attaques sur TLS</h2>
+    <h1 class="text-center">ATTAQUE POODLE</h1>
+    <div class="container-fluid">
+        <div style="width:100%"><h2>Introduction</h2></div>
+
+        <p>L'attaque POODLE (Padding Oracle on Downgraded Legacy Encryption) se base sur des failles de la version 3.0 du protocol TLS (<a href="https://linuxfr.org/news/cve-2014-3566-vulnerabilite-poodle">CVE-2014-3566</a>).
+            Grâce à cette vulnérabilité l'attaquant peut casser le chiffrement d'une communication <span class="red">SSLv3</span>.
+            Cette attaque n'est plus possible sur les versions récentes de TLS mais par soucis de rétro-compatibilités certains serveurs gardent encore la version 3.0 disponible.
+            En 2020 <a href="https://www.acunetix.com/white-papers/acunetix-web-application-vulnerability-report-2020/">Acunetix</a> publie un rapport montrant qu'encore près de 3,8% des serveurs étaient à l'époque encore vulnérables a POODLE.
+        </p>
+
+        <div style="width:100%"><h2>Mise en place préalable</h2></div>
+        <p>
+            L'attaquant doit d'abord mettre en place un <span class="red">Man in the Middle</span> entre le client et le serveur. 
+            A ce stade le canal où l'attaquant écoute est chiffré donc il ne peut pas lire les messages qu'il intercepte.
+
+            Il doit ensuite réussir à imposer l'utilisation du protocole SSL 3.0 <span class="red">(downgrade attack)</span>. 
+            Pour ce faire il lui suffit de couper les connexions suffisament de fois.
+            Au bout d'un certain nombre de coupure le serveur tente automatiquement d'utiliser un protocole plus ancien.
+            En le faisant assez de fois on fini par tomber sur le très vieux SSL 3.0.
+        </p>
+        <img src="/tls/static/image/downgrade.png">
+
+        <div style="width:100%"><h2>Principe du chiffrement</h2></div>
+        <div style="width:100%"><p class="list-chiffr">Chiffrement par blocs chainés</p></div>
+        <p>
+            POODLE utilise le chiffrement par blocs chainés <span class="red">(CBC)</span> pour rendre la communication sûre.
+            Ce système consiste à fragmenter les messages clairs en plusieurs blocs de taille fixe (par exemple 16 octets). 
+            Chaque bloc est XORé avec le bloc chiffré précédent puis on chiffre ce résultat (avec AES par exemple).
+            Pour le premier bloc on utilise un vecteur d’initialisation aléatoire <span class="red">(IV)</span> afin d’obtenir des chiffrés différents pour de mêmes clairs. 
+        </p>
+        <img style="width:50%" src="/tls/static/image/cbc.png">
+
+        <div style="width:100%"><p class="list-chiffr">Padding pour CBC sous SSLv3</p></div>
+        <p>Si le dernier bloc de clair à chiffrer n’est pas totalement rempli, il faut ajouter des octets de <span class="red">padding</span>. 
+            Ces derniers peuvent être aléatoires mais le dernier octet doit toujours donner la longueur du padding mis (en s’excluant du comptage).
+            Si le dernier bloc de clair à chiffrer est totalement rempli, un nouveau bloc rempli exclusivement de padding (et de sa longueur) est crée. 
+            Ce nouveau bloc sert à éviter que le dernier octet du bloc chiffré soit interprété comme la taille du padding.
+        </p>
+
+        <div style="width:100%"><p class="list-chiffr">MAC then encrypt</p></div>
+        <p>Afin de garantir l’intégrité et l’authenticité d’un message, les parties prenantes de la communication utilise un <span class="red">HMAC</span> . 
+            Il est ajouté à la fin du message en clair (avant chiffrement) et permet au destinataire de vérifier le message. 
+            Comme HMAC ne concerne que le clair et n'est utilisable qu'après déchiffrement on n'a <span class="red">aucune garantie d’intégrité sur le chiffré ou le padding</span>.           
+        </p>
+
+        <div style="width:100%"><h2>Déroulé de l'attaque</h2></div>
+        <div id="myCarousel" class="carousel slide" data-ride="false" data-interval="false">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="carrousel-content">
+                        <div>
+                            <h3><u>Etape 1 : </u></h3>
+                            <p>
+                                L’objectif de cette étape est d’obtenir une requête chiffrée avec <span class="red">un bloc rempli d’octet de padding à la fin</span>.
+                                Grâce au MITM l’attaquant peut manipuler les données pour ajouter successivement des octets au clair. 
+                                Il peut ensuite comparer la longueur du nouveau chiffré par rapport à celle du précédent.
+                                On recommence tant que les tailles sont identique et dès qu'elles sont différentes c'est qu'un nouveau bloc rempli de padding à été ajouté.
+                            </p>
+                        </div>
+                        <img src="/tls/static/image/padding.png">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="carrousel-content">
+                        <div>
+                            <h3><u>Etape 2 : </u></h3>
+                            <p>
+                                L’attaquant copie le bloc qu’il essaie de déchiffrer et <span class="red">remplace le bloc de padding final par cette copie</span>. 
+                                Du fait du Vecteur Initial il y'a alors 1 chance sur 256 que le chiffré du dernier octet notre dernier bloc corresponde à la taille du bloc qu'il a écrasé (0x0f pour un bloc de taille 16).
+                                Si l'octet ne correspond pas, un code d'erreur nous est retourné et il faut alors recommencer en modifiant le dernier octet jusqu'à ce ne plus recevoir de code d'erreur.
+                            </p>
+                        </div>
+                        <img src="/tls/static/image/padding_replace.gif">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="carrousel-content">
+                        <div>
+                            <h3><u>Etape 3 : </u></h3>
+                            <p>
+                                L'attaquant utilise une faiblesse de SSL 3.0 pour péter le système de chiffrement. 
+                                Il peut ensuite déchiffrer tous les messages passés par ce canal et peut aussi en forger de nouveaux.
+                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+                            </p>
+                        </div>
+                        <img src="/tls/static/image/chiffrement2.png">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="carrousel-content">
+                        <div>
+                            <h3><u>Etape 4 : </u></h3>
+                            <p>
+                                L'attaquant pousse l'utilisateur à faire tourner du JavaScript qui servira à pérenniser l'attaque. 
+                                Il pourra pour cela utiliser par exemple du social engineering.
+                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+                            
+                            </p>
+                        </div>
+                        <img src="/tls/static/image/physhing.png">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div style="width:100%"><h2>Extension sur BEAST</h2></div>
+        <p>
+            BEAST (Browser Exploit Against SSL/TLS) est une attaque sœur de Poodle. 
+            La différence principale est que là où Poodle attaque le padding du CBC, Beast attaquait directement <span class="red">le vecteur d’initialisation (IV)</span>. 
+            Contrairement à Poodle cette attaque n’est <span class="red">presque plus possible</span> même avec un downgrade à une ancienne version de SSL ou TLS 1.0. 
+            En effet, le MitM demandait un type spécifique de cross-site scripting (XSS) qui a été depuis majoritairement patché. 
+        </p>
+
+        <div id="footer"></div>
+    </div>
 </body>
 </html>

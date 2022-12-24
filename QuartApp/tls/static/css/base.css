@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Unbounded:wght@300&display=swap');
+
+html,body {height:100%}
+
 body {
     background-color: #2e3438;
     color: rgb(212, 212, 212);
-    font-family: 'DroidSans'
+    font-family: 'Secular One', sans-serif;
 }
 
 h1 {
-    padding-top: 1.5vw;
+    padding-top: 1vw;
+    text-decoration: underline;
+}
+
+h1, h2 {
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+.list-chiffr{
+    margin: 10px 0px 0px 0px;
+    text-decoration: underline;
+    font-size: 1.3em;
 }
 
 .col-sm,
@@ -31,7 +50,45 @@ a:active {
     text-decoration: none;
 }
 
+.container-fluid {
+    width: 70%;
+    /* height: 90%;
+    overflow-y: scroll; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+img{
+    width: 60%;
+    background-color: white;
+}
+
+p{
+    margin-top :1vw;
+}
+
+#footer{
+    height: 100px;
+}
+
+.carrousel-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color:black;
+    height: 600px;
+}
+
+.carrousel-content div{
+    width: 80%;
+    height: 150px;
+}
+
+.red{
+    color:rgb(221, 66, 66);
+}
 
 /* SCROLL BAR */
 
@@ -45,6 +102,6 @@ a:active {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(15, 17, 19);
+    background: #2e3438;
     border-radius: 10px;
 }
