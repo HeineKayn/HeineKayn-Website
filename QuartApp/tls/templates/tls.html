@@ -95,7 +95,7 @@
                             <p>
                                 L’attaquant copie le bloc qu’il essaie de déchiffrer et <span class="red">remplace le bloc de padding final par cette copie</span>. 
                                 Du fait du Vecteur Initial il y'a alors 1 chance sur 256 que le chiffré du dernier octet notre dernier bloc corresponde à la taille du bloc qu'il a écrasé (0x0f pour un bloc de taille 16).
-                                Si l'octet ne correspond pas, un code d'erreur nous est retourné et il faut alors recommencer en modifiant le dernier octet jusqu'à ce ne plus recevoir de code d'erreur.
+                                Si l'octet ne correspond pas, un code d'erreur nous est retourné et il faut alors recommencer jusqu'à ce qu'un IV tiré aléatoirement chiffre correctement le dernier octet.
                             </p>
                         </div>
                         <img src="/tls/static/image/padding_replace.gif">
@@ -107,12 +107,14 @@
                         <div>
                             <h3><u>Etape 3 : </u></h3>
                             <p>
-                                L'attaquant utilise une faiblesse de SSL 3.0 pour péter le système de chiffrement. 
-                                Il peut ensuite déchiffrer tous les messages passés par ce canal et peut aussi en forger de nouveaux.
-                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+                                On connait le dernier octet du dernier bloc de message (Pn) on l'utilise comme substitut au dernier chiffré (Cn) <span class="red">Pn = Dechiffre(Cn) ⊕ Cn-1</span>.
+                                Or comme on a remplacé le dernier chiffré par un autre (Ci) <span class="red">Cn = Ci</span> et <span class="red">Dechiffre(Ci) = Pi ⊕ Ci-1 </span>.
+                                On remplace ensuite le déchiffré <span class="red">Pn = Pi ⊕ Ci-1 ⊕ Cn-1 </span>.
+                                On rajoute <span class="red">⊕ Pi ⊕ Pn</span> de chaque côté <span class="red">Pi = Ci-1 ⊕ Cn-1 ⊕ Pn </span>.
+                                On connait <span class="red">Pn[15] = 0x0f et les chiffrés Ci-1 et Cn-1</span> alors on peut trouver le dernier octet Pi[15] qu'on ne connaissait pas.
                             </p>
                         </div>
-                        <img src="/tls/static/image/chiffrement2.png">
+                        <img src="/tls/static/image/etape3.gif">
                     </div>
                 </div>
 
@@ -121,16 +123,12 @@
                         <div>
                             <h3><u>Etape 4 : </u></h3>
                             <p>
-                                L'attaquant pousse l'utilisateur à faire tourner du JavaScript qui servira à pérenniser l'attaque. 
-                                Il pourra pour cela utiliser par exemple du social engineering.
-                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
-                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
-                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
-                                ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
-                            
+                                Maintenant qu'il est possible de déchiffrer le dernier octet d'une transmission on peut shifter la requête en déplaçant le dernier octet au début.
+                                Ainsi chaque répétition nous déchiffrera un nouvel octet.
+                                Et à partir d'un certain nombre de répétition il sera alors possible de <span class="red">récupérer l'entiereté du message d'origine</span>.
                             </p>
                         </div>
-                        <img src="/tls/static/image/physhing.png">
+                        <img src="/tls/static/image/etape4.gif">
                     </div>
                 </div>
             </div>
