@@ -90,6 +90,10 @@ p{
     color:rgb(221, 66, 66);
 }
 
+video{
+    width:100%;
+}
+
 /* SCROLL BAR */
 
 ::-webkit-scrollbar {

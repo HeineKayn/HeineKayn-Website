@@ -111,7 +111,7 @@
                                 Or comme on a remplacé le dernier chiffré par un autre (Ci) <span class="red">Cn = Ci</span> et <span class="red">Dechiffre(Ci) = Pi ⊕ Ci-1 </span>.
                                 On remplace ensuite le déchiffré <span class="red">Pn = Pi ⊕ Ci-1 ⊕ Cn-1 </span>.
                                 On rajoute <span class="red">⊕ Pi ⊕ Pn</span> de chaque côté <span class="red">Pi = Ci-1 ⊕ Cn-1 ⊕ Pn </span>.
-                                On connait <span class="red">Pn[15] = 0x0f et les chiffrés Ci-1 et Cn-1</span> alors on peut trouver le dernier octet Pi[15] qu'on ne connaissait pas.
+                                On connait <span class="red">Pn[15] = 0x0f</span> et les chiffrés <span class="red">Ci-1 et Cn-1</span> alors on peut trouver le dernier octet Pi[15] qu'on ne connaissait pas.
                             </p>
                         </div>
                         <img src="/tls/static/image/etape3.gif">
@@ -143,6 +143,12 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
+        <div style="width:100%"><h2>Démonstration de POODLE</h2></div>
+        <video controls>
+            <source src="/tls/static/video/DM_TLS.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
         <div style="width:100%"><h2>Extension sur BEAST</h2></div>
         <p>
